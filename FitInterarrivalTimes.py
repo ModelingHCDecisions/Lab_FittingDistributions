@@ -31,7 +31,7 @@ print('Fitting an exponential distribution:', fit_results)
 fit_results = FitML.fit_gamma(data=cols[0],
                               x_label='Interarrival Times',
                               bin_width=0.5)
-print('Fitting a gamm distribution:', fit_results)
+print('Fitting a gamma distribution:', fit_results)
 
 # fit a log-normal distribution
 fit_results = FitML.fit_lognorm(data=cols[0],
