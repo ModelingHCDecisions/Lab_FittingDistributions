@@ -6,7 +6,7 @@ exp_params = MM.get_expon_params(mean=10)
 print('Parameters of exponential distribution:', exp_params)
 
 # fitting a beta distribution
-beta_params = MM.get_beta_params(mean = 20,
+beta_params = MM.get_beta_params(mean=20,
                                  st_dev=5,
                                  minimum=0,
                                  maximum=1)
