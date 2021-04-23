@@ -1,7 +1,9 @@
-import SimPy.RandomVariantGenerators as RVGs
+import numpy as np
+
+import SimPy.RandomVariateGenerators as RVGs
 
 # a random number generator
-rng = RVGs.RNG(seed=0)
+rng = np.random.RandomState(seed=0)
 
 # gamma
 gamma = RVGs.Gamma(a=0.9835458832943496,
@@ -15,8 +17,7 @@ for i in range(10):
 # gamma-Poisson
 gammaPoisson = RVGs.GammaPoisson(a=0.3693765965041004,
                                  gamma_scale=9.154827879319111,
-                                 loc=0,
-                                 scale=1)
+                                 loc=0)
 # generate 10 realizations from gamma-Poisson
 print('Realizations from gamma-Poisson:')
 for i in range(10):

@@ -1,7 +1,8 @@
 import SimPy.InOutFunctions as IO
 import SimPy.Plots.Histogram as Hist
-import SimPy.StatisticalClasses as Stat
-import SimPy.FittingProbDist_ML as FitML
+import SimPy.Plots.ProbDist as Plot
+import SimPy.RandomVariateGenerators as RVGs
+import SimPy.Statistics as Stat
 
 # read interarrival times
 cols = IO.read_csv_cols(file_name='dataInterarrivalTimes.csv',
@@ -21,19 +22,23 @@ print('Mean = ', stat.get_mean())
 print('StDev = ', stat.get_stdev())
 
 # fit an exponential distribution
-fit_results = FitML.fit_exp(data=cols[0],
-                            x_label='Interarrival Times',
-                            bin_width=0.5)
+fit_results = RVGs.Exponential.fit_ml(data=cols[0])
 print('Fitting an exponential distribution:', fit_results)
 
+# plot the fitted exponential distribution
+Plot.plot_exponential_fit(data=cols[0], fit_results=fit_results, x_label='Interarrival Times', bin_width=0.5)
+
+
 # fit a gamma distribution
-fit_results = FitML.fit_gamma(data=cols[0],
-                              x_label='Interarrival Times',
-                              bin_width=0.5)
+fit_results = RVGs.Gamma.fit_ml(data=cols[0])
 print('Fitting a gamma distribution:', fit_results)
 
+# plot the fitted gamma distribution
+Plot.plot_gamma_fit(data=cols[0], fit_results=fit_results, x_label='Interarrival Times', bin_width=0.5)
+
 # fit a log-normal distribution
-fit_results = FitML.fit_lognorm(data=cols[0],
-                                x_label='Interarrival Times',
-                                bin_width=0.5)
+fit_results = RVGs.LogNormal.fit_ml(data=cols[0])
 print('Fitting a log-normal distribution:', fit_results)
+
+# plot the fitted log-normal distribution
+Plot.plot_lognormal_fit(data=cols[0], fit_results=fit_results, x_label='Interarrival Times', bin_width=0.5)
