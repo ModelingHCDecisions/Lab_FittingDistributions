@@ -26,7 +26,8 @@ fit_results = RVGs.Exponential.fit_ml(data=cols[0])
 print('Fitting an exponential distribution:', fit_results)
 
 # plot the fitted exponential distribution
-Plot.plot_exponential_fit(data=cols[0], fit_results=fit_results, x_label='Interarrival Times', bin_width=0.5)
+Plot.plot_exponential_fit(
+    data=cols[0], fit_results=fit_results, x_label='Interarrival Times', x_range=(0, 20), bin_width=0.5)
 
 
 # fit a gamma distribution
@@ -34,11 +35,13 @@ fit_results = RVGs.Gamma.fit_ml(data=cols[0])
 print('Fitting a gamma distribution:', fit_results)
 
 # plot the fitted gamma distribution
-Plot.plot_gamma_fit(data=cols[0], fit_results=fit_results, x_label='Interarrival Times', bin_width=0.5)
+Plot.plot_gamma_fit(
+    data=cols[0], fit_results=fit_results, x_label='Interarrival Times', x_range=(0, 20), bin_width=0.5)
 
 # fit a log-normal distribution
 fit_results = RVGs.LogNormal.fit_ml(data=cols[0])
 print('Fitting a log-normal distribution:', fit_results)
 
 # plot the fitted log-normal distribution
-Plot.plot_lognormal_fit(data=cols[0], fit_results=fit_results, x_label='Interarrival Times', bin_width=0.5)
+Plot.plot_lognormal_fit(
+    data=cols[0], fit_results=fit_results, x_label='Interarrival Times', x_range=(0, 20), bin_width=0.5)
