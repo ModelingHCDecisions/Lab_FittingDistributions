@@ -1,4 +1,4 @@
-import deampy.random_variats as rvgs
+import deampy.random_variates as rvgs
 
 # fitting an exponential distribution
 exp_params = rvgs.Exponential.fit_mm(mean=10)
