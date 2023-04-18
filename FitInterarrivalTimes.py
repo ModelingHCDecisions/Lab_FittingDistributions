@@ -1,7 +1,7 @@
 import deampy.in_out_functions as io
 import deampy.plots.histogram as hist
 import deampy.plots.prob_dists as plot_dist
-import deampy.random_variats as RVGs
+import deampy.random_variates as RVGs
 import deampy.statistics as stats
 
 # read interarrival times
