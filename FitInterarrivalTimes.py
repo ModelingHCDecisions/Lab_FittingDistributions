@@ -22,26 +22,20 @@ print('Mean = ', stat.get_mean())
 print('StDev = ', stat.get_stdev())
 
 # fit an exponential distribution
-fit_results = rvgs.Exponential.fit_ml(data=cols[0])
+
 print('Fitting an exponential distribution:', fit_results)
 
 # plot the fitted exponential distribution
-plot_dist.plot_exponential_fit(
-    data=cols[0], fit_results=fit_results, x_label='Interarrival Times', x_range=(0, 20), bin_width=0.5)
 
 
 # fit a gamma distribution
-fit_results = rvgs.Gamma.fit_ml(data=cols[0])
+
 print('Fitting a gamma distribution:', fit_results)
 
 # plot the fitted gamma distribution
-plot_dist.plot_gamma_fit(
-    data=cols[0], fit_results=fit_results, x_label='Interarrival Times', x_range=(0, 20), bin_width=0.5)
 
 # fit a log-normal distribution
-fit_results = rvgs.LogNormal.fit_ml(data=cols[0])
+
 print('Fitting a log-normal distribution:', fit_results)
 
 # plot the fitted log-normal distribution
-plot_dist.plot_lognormal_fit(
-    data=cols[0], fit_results=fit_results, x_label='Interarrival Times', x_range=(0, 20), bin_width=0.5)
